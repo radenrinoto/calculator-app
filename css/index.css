@@ -99,6 +99,7 @@ main {
   font-size: 28px;
   border-radius: 10px;
   background-color: var(--color-input);
+  color: var(--color-text-3);
 }
 
 .form__input:focus {

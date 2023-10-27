@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/switch.css" />
-    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/button.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +40,7 @@
         </div>
       </div>
       <!-- INPUT NUMBER -->
-      <input type="text" name="result" id="result" class="form__input" />
+      <input type="text" name="result" id="result" class="form__input form__input__dark" />
       <!-- NUMBERS -->
       <div id="numbers" class="numbers">
         <!-- NUMBER -->
@@ -65,12 +66,7 @@
           onclick="handleReset()"
           value="RESET"
         />
-        <input
-          type="button"
-          class="btn btn__third bottom"
-          value="="
-          onclick="calculate(result.value)"
-        />
+        <input type="button" class="btn bottom" value="=" onclick="calculate(result.value)" />
       </div>
     </main>
     <script src="js/switch.js"></script>
