@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="icon" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container" id="screen">
+      <header>
+        <div class="brand">
+          <h1>calc</h1>
+        </div>
+        <div class="right__header">
+          <h1>THEME</h1>
+          <div class="toggle__container">
+            <div class="number__toggle">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div class="toggle__wrapper">
+              <input class="toggle__btn" type="radio" name="toggle" id="one" />
+              <input class="toggle__btn" type="radio" name="toggle" id="two" />
+              <input
+                class="toggle__btn"
+                type="radio"
+                name="toggle"
+                id="three"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="results">0</section>
+      <section class="calc__btn__wrapper">
+        <div class="calc__btn__row">
+          <button class="calc__btn">7</button>
+          <button class="calc__btn">8</button>
+          <button class="calc__btn">9</button>
+          <button class="calc__btn del">DEL</button>
+        </div>
+        <div class="calc__btn__row">
+          <button class="calc__btn">4</button>
+          <button class="calc__btn">5</button>
+          <button class="calc__btn">6</button>
+          <button class="calc__btn">&plus;</button>
+        </div>
+        <div class="calc__btn__row">
+          <button class="calc__btn">1</button>
+          <button class="calc__btn">2</button>
+          <button class="calc__btn">3</button>
+          <button class="calc__btn">&minus;</button>
+        </div>
+        <div class="calc__btn__row">
+          <button class="calc__btn">.</button>
+          <button class="calc__btn">0</button>
+          <button class="calc__btn">&sol;</button>
+          <button class="calc__btn">&times;</button>
+        </div>
+        <div class="calc__btn__row">
+          <button class="calc__btn reset">RESET</button>
+          <button class="calc__btn equals">&equals;</button>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
