@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/switch.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <!-- <link rel="stylesheet" href="css/dark.css" />
+    <link rel="stylesheet" href="css/light.css" />
+    <link rel="stylesheet" href="css/negative.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcultaor</title>
+  </head>
+  <body>
+    <main>
+      <!-- HEAD -->
+      <div class="head">
+        <h1 class="head__title">calc</h1>
+        <div class="head__theme">
+          <label class="head__theme__title">THEME</label>
+          <!-- SWITCH -->
+          <div class="head__themeNumber">
+            <div class="head__numbers">
+              <label class="head__number" onclick="setThemeDark()">1</label>
+              <label class="head__number" onclick="setThemeLight()">2</label>
+              <label class="head__number" onclick="setThemeNegative()">3</label>
+            </div>
+            <div class="switch">
+              <div id="ball" class="ball"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- INPUT NUMBER -->
+      <input type="text" name="result" id="result" class="form__input" />
+      <!-- NUMBERS -->
+      <div id="numbers" class="numbers">
+        <!-- NUMBER -->
+        <input type="button" class="btn" value="7" onclick="liveScreen(7)" />
+        <input type="button" class="btn" value="8" onclick="liveScreen(8)" />
+        <input type="button" class="btn" value="9" onclick="liveScreen(9)" />
+        <input type="button" class="btn btn__secondary" onclick="handleBackspace()" value="DEL" />
+        <input type="button" class="btn" value="4" onclick="liveScreen(4)" />
+        <input type="button" class="btn" value="5" onclick="liveScreen(5)" />
+        <input type="button" class="btn" value="6" onclick="liveScreen(6)" />
+        <input type="button" class="btn" value="+" onclick="liveScreen(`+`)" />
+        <input type="button" class="btn" value="1" onclick="liveScreen(1)" />
+        <input type="button" class="btn" value="2" onclick="liveScreen(2)" />
+        <input type="button" class="btn" value="3" onclick="liveScreen(3)" />
+        <input type="button" class="btn" value="-" onclick="liveScreen(`-`)" />
+        <input type="button" class="btn" value="." onclick="liveScreen(`.`)" />
+        <input type="button" class="btn" value="0" onclick="liveScreen(0)" />
+        <input type="button" class="btn" value="/" onclick="liveScreen(`/`)" />
+        <input type="button" class="btn" value="x" onclick="liveScreen(`*`)" />
+        <input
+          type="button"
+          class="btn btn__secondary bottom"
+          onclick="handleReset()"
+          value="RESET"
+        />
+        <input
+          type="button"
+          class="btn btn__third bottom"
+          value="="
+          onclick="calculate(result.value)"
+        />
+      </div>
+    </main>
+    <script src="js/switch.js"></script>
+    <script src="js/calc.js"></script>
+  </body>
+</html>

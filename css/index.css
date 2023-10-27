@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.theme-dark {
+  --color-background: #3b4664;
+  --color-input: #181f32;
+  --color-text-1: #647199;
+  --color-text-2: #eeee;
+  --color-text-3: #eeee;
+  --color-backgroundCalc: #252d44;
+  --color-backgroundNumb: #eae3db;
+  --color-backgroundNumbDel: #647199;
+  --color-backgroundEqual: #d13f30;
+}
+
+.theme-light {
+  --color-background: #e6e6e6;
+  --color-input: #eeee;
+  --color-text-1: #37372d;
+  --color-text-2: #eeeeee;
+  --color-text-3: #37372d;
+  --color-backgroundCalc: #d3cdcd;
+  --color-backgroundNumb: #e5e4e0;
+  --color-backgroundNumbDel: #388187;
+  --color-backgroundEqual: #c85401;
+}
+
+.theme-negative {
+  --color-background: #17062a;
+  --color-input: #1e0836;
+  --color-text-1: #fce741;
+  --color-text-2: #eeeeee;
+  --color-text-3: #fce741;
+  --color-backgroundCalc: #1e0836;
+  --color-backgroundNumb: #331b4d;
+  --color-backgroundNumbDel: #56077c;
+  --color-backgroundEqual: #00decf;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--color-background);
+}
+
+main {
+  width: 30rem;
+  padding: 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--color-text-3);
+}
+
+.head__title {
+  font-size: 18px;
+}
+
+.head__theme {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.head__theme__title {
+  font-size: 12px;
+}
+
+.head__themeNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.head__numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head__number {
+  font-size: 12px;
+}
+
+.form__input {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 20px;
+  border: none;
+  font-size: 28px;
+  border-radius: 10px;
+  background-color: var(--color-input);
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.numbers {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 2fr);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--color-backgroundCalc);
+}
+
+.switch {
+  width: 71px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ball {
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+  background-color: var(--color-backgroundEqual);
+}
+
+.ball.theme-dark {
+  transform: translateX(0);
+}
+
+.ball.theme-light {
+  transform: translateX(25px);
+}
+
+.ball.theme-negative {
+  transform: translateX(50px);
+}

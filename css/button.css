@@ -1,0 +1,31 @@
+.btn {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--color-backgroundNumb);
+  color: var(--color-text-1);
+}
+
+.btn.bottom {
+  width: auto;
+  grid-column-end: span 2;
+}
+
+.btn__secondary {
+  background-color: var(--color-backgroundNumbDel);
+  color: var(--color-text-2);
+}
+
+.btn__third {
+  background-color: var(--color-backgroundEqual);
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--color-backgroundNumbDel);
+  color: var(--color-text-2);
+}
