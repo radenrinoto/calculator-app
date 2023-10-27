@@ -1,0 +1,18 @@
+@media screen and (max-width: 576px) {
+  .calculator-box {
+    padding: 1.5rem;
+  }
+  .calculator-button {
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1.5rem;
+  }
+  .calculator-button > button {
+    padding: 1.25rem 0 1.25rem 0;
+    border: none;
+  }
+  .dot {
+    width: 1rem;
+    height: 1rem;
+  }
+}

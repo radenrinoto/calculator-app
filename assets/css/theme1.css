@@ -1,0 +1,51 @@
+.theme-1 * {
+  color: #414b55;
+}
+body.theme-1 {
+  background-color: #373f5d;
+}
+.theme-1 .header > p {
+  color: white;
+}
+.theme-1 .toggle {
+  background-color: #252c45;
+}
+.theme-1 .toggle::before {
+  color: white;
+}
+.theme-1 .monitor {
+  background-color: #181f32;
+}
+.theme-1 .monitor > p {
+  color: white;
+}
+.theme-1 .calculator-button > button {
+  background-color: #eae3db;
+}
+.theme-1 .calculator-button > button:hover {
+  background-color: #ffffff;
+}
+.theme-1 .dot,
+.theme-1 button.button-result {
+  background-color: #d03f30;
+  color: white;
+}
+.theme-1 button.button-result {
+  box-shadow: 2px 2px #922315;
+}
+.theme-1 button.button-result:hover {
+  background-color: #f96c5b;
+}
+.theme-1 button.button-reset,
+.theme-1 button.op-del {
+  background-color: #647197;
+  color: white;
+  box-shadow: 2px 2px #404d74;
+}
+.theme-1 button.button-reset:hover,
+.theme-1 button.op-del:hover {
+  background-color: #a2b3e1;
+}
+.theme-1 .calculator-button {
+  background-color: #252d44;
+}

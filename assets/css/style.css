@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --content: "1";
+  --shadowcolor: ;
+}
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+main {
+  width: 100%;
+}
+
+main,
+.calculator-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  gap: 1.25rem;
+  align-items: center;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+header > p {
+  font-weight: bold;
+  font-size: xx-large;
+}
+.toggle {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  width: calc(1.25rem * 3);
+  height: 1.5rem;
+  border-radius: 30px;
+  /* height: fit-content; */
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.toggle::before {
+  content: "theme";
+  text-transform: uppercase;
+  position: absolute;
+  left: -4rem;
+  font-size: small;
+  font-weight: 700;
+}
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 500ms;
+  left: 0.5rem;
+}
+.dot::before {
+  content: var(--content);
+  position: absolute;
+  top: -1.5rem;
+  font-size: small;
+  font-weight: 600;
+}
+.monitor {
+  height: 6rem;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 21.25rem;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: end;
+}
+.monitor > p {
+  font-size: xx-large;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#text {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: medium;
+  max-width: 18rem;
+  opacity: 70%;
+}
+.calculator-button {
+  display: grid;
+  grid-template-areas:
+    "num7 num8 num9 del" "num4 num5 num6 plus" "num1 num2 num3 min"
+    "dot num0 divide mult" "reset reset result result";
+  gap: 0.75rem;
+  background-color: aqua;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+.calculator-button > button {
+  padding: 0.5rem 0 0.5rem 0;
+  width: 4rem;
+  border-radius: 10px;
+  border: none;
+  font-size: x-large;
+  font-weight: bold;
+  box-shadow: 2px 2px var(--shadowcolor);
+}
+.calculator-button > button:active {
+  transform: translate(2px, 2px);
+}
+.calculator-button > .button-reset,
+.calculator-button > .button-result {
+  width: auto;
+}
+.calculator-button > button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+.number0 {
+  grid-area: num0;
+}
+.number1 {
+  grid-area: num1;
+}
+.number2 {
+  grid-area: num2;
+}
+.number3 {
+  grid-area: num3;
+}
+.number4 {
+  grid-area: num4;
+}
+.number5 {
+  grid-area: num5;
+}
+.number6 {
+  grid-area: num6;
+}
+.number7 {
+  grid-area: num7;
+}
+.number8 {
+  grid-area: num8;
+}
+.number9 {
+  grid-area: num9;
+}
+.op-del {
+  grid-area: del;
+}
+.op-plus {
+  grid-area: plus;
+}
+.op-min {
+  grid-area: min;
+}
+.op-mult {
+  grid-area: mult;
+}
+.op-divide {
+  grid-area: divide;
+}
+.op-dot {
+  grid-area: dot;
+}
+.button-reset {
+  grid-area: reset;
+}
+.button-result {
+  grid-area: result;
+}

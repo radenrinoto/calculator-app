@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/small.css" />
+    <link rel="stylesheet" href="./assets/css/theme1.css" />
+    <link rel="stylesheet" href="./assets/css/theme2.css" />
+    <link rel="stylesheet" href="./assets/css/theme3.css" />
+    <title>Calculator</title>
+  </head>
+  <body class="theme-1">
+    <main>
+      <div class="calculator-box">
+        <header class="header">
+          <p>calc</p>
+          <div class="toggle" onclick="changeindex()">
+            <div class="dot"></div>
+          </div>
+        </header>
+        <div class="monitor">
+          <p id="progres-text"></p>
+          <p id="text"></p>
+        </div>
+        <div class="calculator-button">
+          <!-- grid  -->
+          <button class="number0" onclick="handleCalculator('0')">0</button>
+          <button class="number1" onclick="handleCalculator('1')">1</button>
+          <button class="number2" onclick="handleCalculator('2')">2</button>
+          <button class="number3" onclick="handleCalculator('3')">3</button>
+          <button class="number4" onclick="handleCalculator('4')">4</button>
+          <button class="number5" onclick="handleCalculator('5')">5</button>
+          <button class="number6" onclick="handleCalculator('6')">6</button>
+          <button class="number7" onclick="handleCalculator('7')">7</button>
+          <button class="number8" onclick="handleCalculator('8')">8</button>
+          <button class="number9" onclick="handleCalculator('9')">9</button>
+          <button class="op-del" onclick="handleCalculator('del')">del</button>
+          <button class="op-plus" onclick="handleCalculator('+')">+</button>
+          <button class="op-min" onclick="handleCalculator('-')">-</button>
+          <button class="op-divide" onclick="handleCalculator('/')">/</button>
+          <button class="op-dot" onclick="handleCalculator('.')">.</button>
+          <button class="op-mult" onclick="handleCalculator('*')">x</button>
+          <button class="button-reset" onclick="handleCalculator('reset')">
+            reset
+          </button>
+          <button class="button-result" onclick="result()">=</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script src="./assets/js/javascript.js"></script>
+<script src="./assets/js/calculator.js"></script>
