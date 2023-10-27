@@ -31,7 +31,7 @@ const calculateResult = () => {
             const result = evaluate(numberCalculator.value)
             numberCalculator.value = result
         }catch (error) {
-            alert('Error: ' + error.message);
+            alert("silahkan input dengan format yg benar");
         }
     }else{
         alert('Masukkan angka kamu dulu')
