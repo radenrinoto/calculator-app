@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-calc">
+            <div class="top-calc">
+                <p>calc</p>
+
+                <div class="switch">
+                    <p>THEME</p>
+                    <div class="switch-radios">
+                        <input type="radio" name="theme-type" value="one" id="first">
+                        <input type="radio" name="theme-type" value="two" id="second">
+                        <input type="radio" name="theme-type" value="three" id="third">
+                    </div>
+                    <div class="switch-fas">
+                        <a class = "nav">1</a>
+                        <a class = "nav">2</a>
+                        <a class = "nav">3</a>
+                    </div>
+                    <div class="ball"></div>
+                </div>
+                
+            </div>
+
+            <div id="display">
+                <input type="text" id="result" readonly />
+            </div>
+
+            <div id="calculator">
+                <div id="buttons">
+                    <button onclick="appendTarget(7)">7</button>
+                    <button onclick="appendTarget(8)">8</button>
+                    <button onclick="appendTarget(9)">9</button>
+                    <button class="del" onclick="deleteTarget()" id="del">DEL</button>
+                    <button onclick="appendTarget(4)">4</button>
+                    <button onclick="appendTarget(5)">5</button>
+                    <button onclick="appendTarget(6)">6</button>
+                    <button onclick="appendTarget('+')">+</button>
+                    <button onclick="appendTarget(1)">1</button>
+                    <button onclick="appendTarget(2)">2</button>
+                    <button onclick="appendTarget(3)">3</button>
+                    <button onclick="appendTarget('-')">-</button>
+                    <button onclick="appendTarget('.')">.</button>
+                    <button onclick="appendTarget(0)">0</button>
+                    <button onclick="appendTarget('/')">/</button>
+                    <button onclick="appendTarget('*')">x</button>
+                </div>
+                <div class="row">
+                    <button onclick="clearResult()">RESET</button>
+                    <button onclick="calculateResult()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
