@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
+    <script src="script/index.js"></script>
+</head>
+<body>
+    <main id>
+        <div class="container-calculator">
+            <div class="header-calculator">
+                <div class="header-calculator-title">calc</div>
+                <div class="header-calculator-switch">
+                    <div class="header-calculator-switch-text">theme</div>
+                    <div class="header-calculator-switch-container">
+                        <div class="btn-container" id="btn-container">
+                            <div class="btn-switch-theme" id="btn-switch-theme"></div>
+                        </div>
+
+                        <div class="choice-theme-container" id="choice-theme-container">
+                            <div class="choice" onclick="switchTheme1()">1</div>
+                            <div class="choice" onclick="switchTheme2()">2</div>
+                            <div class="choice" onclick="switchTheme3()">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="display">
+                <input type="text" class="display-result" id="display-result" value=0 disabled>
+            </section>
+            <section class="list-function-calculator">
+                <button id="btn-8" onclick="displayNumber(7)">7</button>
+                <button id="btn-8" onclick="displayNumber(8)">8</button>
+                <button id="btn-9" onclick="displayNumber(9)">9</button>
+                <button onclick="deleteNumberFromCalculator('del')" class="btn-delete" id="btn-delete">DEL</button>
+                <button id="btn-4" onclick="displayNumber(4)">4</button>
+                <button id="btn-5" onclick="displayNumber(5)">5</button>
+                <button id="btn-6" onclick="displayNumber(6)">6</button>
+                <button id="btn-plus" onclick="displayNumber('+')">+</button>
+                <button id="btn-1" onclick="displayNumber(1)">1</button>
+                <button id="btn-2" onclick="displayNumber(2)">2</button>
+                <button id="btn-3" onclick="displayNumber(3)">3</button>
+                <button id="btn-minus" onclick="displayNumber('-')">-</button>
+                <button id="btn-point" onclick="displayNumber('.')">.</button>
+                <button id="btn-0" onclick="displayNumber(0)">0</button>
+                <button id="btn-divide" onclick="displayNumber('/')">/</button>
+                <button id="btn-multiply" onclick="displayNumber('*')">x</button>
+                <button onclick="clearResultCalculator()" class="btn-reset" id="btn-reset">RESET</button>
+                <button onclick="calculateResult()" class="btn-total" id="btn-total">=</button>
+            </section>
+        </div>
+    </main>
+    <script src="script/theme.js"></script>
+</body>
+</html>
