@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./view/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet" />
+    <title>Calculator APP</title>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="content">
+        <!-- HEADER -->
+        <div class="header">
+          <div class="switch">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="themeCont">
+            <div class="logo"><h1>CALC</h1></div>
+            <div class="theme">
+              <h1>THEME</h1>
+              <div class="switch-toggle">
+                <input id="theme1" name="theme" type="radio" checked />
+                <label for="theme1"></label>
+
+                <input id="theme2" name="theme" type="radio" />
+                <label for="theme2"></label>
+
+                <input id="theme3" name="theme" type="radio" />
+                <label for="theme3"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END HEADER -->
+        <!-- Hasil Calc -->
+        <div class="numberResult">
+          <input type="text" id="display" readonly />
+        </div>
+        <!-- End Hasil Calc -->
+        <div class="inputNumber">
+          <button class="number" onclick="cetak('7')">7</button>
+          <button class="number" onclick="cetak('8')">8</button>
+          <button class="number" onclick="cetak('9')">9</button>
+          <button class="del" onclick="del()">DEL</button>
+          <button class="number" onclick="cetak('4')">4</button>
+          <button class="number" onclick="cetak('5')">5</button>
+          <button class="number" onclick="cetak('6')">6</button>
+          <button class="number" onclick="cetak('+')">+</button>
+          <button class="number" onclick="cetak('1')">1</button>
+          <button class="number" onclick="cetak('2')">2</button>
+          <button class="number" onclick="cetak('3')">3</button>
+          <button class="number" onclick="cetak('-')">-</button>
+          <button class="number" onclick="cetak('.')">.</button>
+          <button class="number" onclick="cetak('0')">0</button>
+          <button class="number" onclick="cetak('/')">/</button>
+          <button class="number" onclick="cetak('*')">x</button>
+          <button class="item1" onclick="reset()">RESET</button>
+          <button class="item2" onclick="result()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="./view/script/script.js"></script>
+  </body>
+</html>
