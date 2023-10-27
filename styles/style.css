@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-name {
+  margin-left: 0.5rem;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.calc-box {
+  width: 100%;
+  max-width: 32rem;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.display {
+  align-self: stretch;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+input#result {
+  border: none;
+  background: transparent;
+  text-align: right;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+
+.header-container {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.box-buttons {
+  margin-top: 2rem;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+button {
+  flex: calc(25% - 1.5rem);
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 1rem 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+button:active {
+  transform: translateY(0.1rem);
+}
+
+/*switch styles*/
+
+div.btn-container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div.btn-container i{
+  display: inline-block;
+  position: relative;
+  top: -9px;
+}
+
+label {
+  font-size: 13px;
+  color: #424242;
+  font-weight: 500;
+}
+
+.btn-color-mode-switch{
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+  margin: 0px;
+  width: 140px;
+  height: 30px;
+  background: #E0E0E0;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+  content: attr(data-on);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  top: 7px;
+  right: 20px;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+  content: attr(data-off);
+  width: 70px;
+  height: 16px;
+  background: #fff;
+  border-radius: 26px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+  padding: 5px 0px;
+}
+
+.btn-color-mode-switch > .alert{
+  display: none;
+  background: #FF9800;
+  border: none;
+  color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]{
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+  background: #151515;
+  color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+  content: attr(data-on);
+  left: 68px;
+  background: #3c3c3c;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+  /*background: #66BB6A; */
+  /*color: #fff;*/
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
+  display: block;
+}
+
+/* Mode preview */
+/* White preview */
+
+.white-preview #calculator{
+  background: #e6e6e6;
+  color: #000;
+}
+
+.white-preview .app-name {
+  color: #000;
+}
+
+.white-preview .display {
+  background-color: #FFF;
+}
+
+.white-preview .box-buttons {
+  background-color: #d3cdcd;
+}
+
+.white-preview button {
+  color: #000;
+  background-color: #e5e4e0;
+  box-shadow: 0 0.4rem #b6afa4;
+}
+
+.white-preview button:hover {
+  background-color: #FFF;
+}
+
+.white-preview button:active {
+  box-shadow: 0 5px #9f958b;
+}
+
+.white-preview .del, .white-preview .reset {
+  background-color: #388187;
+  color: #FFF;
+  box-shadow: 0 0.4rem #13525b;
+}
+
+.white-preview .del:hover,
+.white-preview .reset:hover {
+  background-color: #61b5bb;
+}
+
+.white-preview .del:active,
+.white-preview .reset:active {
+  background-color: #61b5bb;
+  box-shadow: 0 5px #666;
+  transform: translateY(0.1rem);
+}
+
+.white-preview .equals {
+  background-color: #c85401;
+  color: #FFF;
+  box-shadow: 0 0.4rem #8f3b01;
+}
+
+.white-preview .equals:hover {
+  background-color: #ff8b38;
+}
+
+.white-preview .equals:active {
+  background-color: #ff8b38;
+  box-shadow: 0 5px #666;
+  transform: translateY(0.1rem);
+}
+
+.white-preview div.btn-container i.fa-sun-o{
+  color: #ffa500;
+  text-shadow: 0px 0px 16px #ffa500;
+}
+
+.white-preview div.btn-container i.fa-moon-o{
+  color: #777;
+}
+
+/* Dark preview */
+.dark-preview #calculator{
+  background: #3b4664;
+}
+
+.dark-preview .app-name {
+  color: #FFF;
+}
+
+.dark-preview .display {
+  background-color: #181f32;
+}
+
+.dark-preview input[type="text"] {
+  color: #FFF;
+}
+
+.dark-preview .box-buttons {
+  background-color: #252c44;
+}
+
+.dark-preview button {
+  background-color: #eae3db;
+  box-shadow: 0 0.4rem #baa89d;
+}
+
+.dark-preview button:hover {
+  background-color: #FFF;
+}
+
+.dark-preview button:active {
+  box-shadow: 0 5px #afa4a2;
+}
+
+.dark-preview .del, .dark-preview .reset {
+  background-color: #647199;
+  color: #FFF;
+  box-shadow: 0 0.4rem #13525b;
+}
+
+.dark-preview .del:hover,
+.dark-preview .reset:hover {
+  background-color: #a2b3e1;
+}
+
+.dark-preview .del:active,
+.dark-preview .reset:active {
+  background-color: #a2b3e1;
+  box-shadow: 0 5px #414e6e;
+  transform: translateY(0.1rem);
+}
+
+.dark-preview .equals {
+  background-color: #d13e30;
+  color: #FFF;
+  box-shadow: 0 0.4rem #8f3b01;
+}
+
+.dark-preview .equals:hover {
+  background-color: #f96c5b;
+}
+
+.dark-preview .equals:active {
+  background-color: #f96c5b;
+  box-shadow: 0 5px #8f2316;
+  transform: translateY(0.1rem);
+}
+
+.dark-preview div.btn-container i.fa-sun-o{
+  color: #777;
+}
+
+.dark-preview div.btn-container i.fa-moon-o{
+  color: #fff;
+  text-shadow: 0px 0px 11px #fff;
+}
