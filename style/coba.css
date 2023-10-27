@@ -1,0 +1,131 @@
+/* Reset default styles and set up variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Define variables */
+:root {
+    --back-color1: #3B4664;
+    --display: #181F32;
+    --input: #252D44;
+    --input2: #EAE3DB;
+    --shadow: #B2A196;
+    --text: #424B59;
+    --white: #fff;
+    --black: #000;
+    --orange: #D13F30;
+}
+
+/* Apply a basic reset to remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Set the default font family and text color for the entire document */
+body {
+    font-family: 'Inter';
+    text-align: center;
+    min-height: 100vh;
+    background: var(--back-color1);
+}
+
+/* Center the content within a container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the form */
+.container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    /* width: 100%; */
+    height: 100vh;
+}
+
+/* Style the display */
+.display {
+    margin-bottom: 1rem;
+}
+
+.display .text-display {
+    width: 100%; /* Take up the full width */
+    height: 5.5rem;
+    color: var(--white);
+    padding: 20px 10px;
+    text-align: right;
+    letter-spacing: 1px;
+    font-size: 35px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: var(--display);
+    border: none;
+}
+
+/* Style the input buttons */
+.input {
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--input);
+}
+
+.input input {
+    border: 0;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: var(--input2);
+    font-size: 25px;
+    font-weight: 800;
+    box-shadow: 0 3px var(--shadow);
+    color: var(--text);
+    cursor: pointer;
+    margin: 0.6rem;
+}
+
+#delete,
+#reset {
+    background: var(--back-color1);
+    box-shadow: 0 3px #424E75;
+    color: var(--white);
+    text-align: center;
+}
+
+#reset,
+#equal {
+    width: 11.5rem;
+}
+
+#equal {
+    background: var(--orange);
+    box-shadow: 0 3px #902517;
+    color: var(--white);
+    text-align: center;
+}
+
+/* Make the layout responsive for screens up to 768px wide */
+@media (max-width: 768px) {
+    .display .text-display {
+        width: 100%; /* Take up the full width on smaller screens */
+    }
+
+    .input {
+        padding: 0.5rem; /* Reduce the padding on smaller screens */
+    }
+
+    .input input {
+        width: 4rem; /* Decrease the input button width on smaller screens */
+        height: 2.5rem;
+        font-size: 20px;
+    }
+
+    #reset,
+    #equal {
+        width: 7rem; /* Adjust the width of reset and equal buttons */
+    }
+}
+

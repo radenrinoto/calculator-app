@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    <title> Calculator App </title>
+</head>
+
+<body>
+    <div class="container">
+        <form name="calculator">
+            <div class="theme" id="theme">
+                <div>
+                    <h1> calc </h1>
+                </div>
+                <div class="combine-slider" id="combine-slider">
+                    <p> Theme </p>
+                    <div class="slider">
+                        <div class="result">
+                            <p> 1 </p>
+                            <p> 2 </p>
+                            <p> 3 </p>
+                        </div>
+
+                        <div class="toggle">
+                            <input type="radio" id="theme1" name="toggle" checked>
+                            <input type="radio" id="theme2" name="toggle">
+                            <input type="radio" id="theme3" name="toggle">
+                            <label for="theme1"> </label>
+                            <label for="theme2"> </label>
+                            <label for="theme3"> </label>
+                            <div class="slider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display">
+                <input class="text-display" id="text-display" type="text" name="display" disabled>
+            </div>
+            <div class="input">
+                <div class="rows input-row1">
+                    <input type="button" id="seven" value="7" onclick="displayOutput('7')">
+                    <input type="button" id="eight" value="8" onclick="displayOutput('8')">
+                    <input type="button" id="nine" value="9" onclick="displayOutput('9')">
+                    <input type="button" id="delete" value="DEL" onclick="deleted()">
+                </div>
+                <div class="rows input-row2">
+                    <input type="button" id="four" value="4" onclick="displayOutput('4')">
+                    <input type="button" id="five" value="5" onclick="displayOutput('5')">
+                    <input type="button" id="six" value="6" onclick="displayOutput('6')">
+                    <input type="button" id="plus" value="+" onclick="displayOutput('+')">
+                </div>
+                <div class="rows input-row3">
+                    <input type="button" id="one" value="1" onclick="displayOutput('1')">
+                    <input type="button" id="two" value="2" onclick="displayOutput('2')">
+                    <input type="button" id="three" value="3" onclick="displayOutput('3')">
+                    <input type="button" id="minus" value="-" onclick="displayOutput('-')">
+                </div>
+                <div class="input-row4">
+                    <input type="button" id="dot" value="." onclick="displayOutput(',')">
+                    <input type="button" id="zero" value="0" onclick="displayOutput('0')">
+                    <input type="button" id="divide" value="/" onclick="displayOutput('/')">
+                    <input type="button" id="multi" value='x' onclick="displayOutput('*')">
+                </div>
+                <div class="input-row5">
+                    <input type="button" id="reset" value="RESET" onclick="clearScreen()">
+                    <input type="button" id="equal" value="=" onclick="results()">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

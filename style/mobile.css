@@ -1,0 +1,40 @@
+:root {
+    --back-color1: #3B4664;
+    --display: #181F32;
+    --input: #252D44;
+    --input2: #EAE3DB;
+    --shadow: #B2A196;
+    --text: #424B59;
+    --white: #fff;
+    --black: #000;
+    --orange: #D13F30;
+}
+
+@media only screen and (max-width: 768px) {
+    .container form {
+        width: 26rem;
+        padding: 0 1rem;
+    }
+
+    /* Slider Content */
+    .combine-slider .slider {
+        gap: 10px;
+    }
+
+    /* Display Content */
+    .display .text-display {
+        height: 5.5rem;
+    }
+
+    /* Input Content */
+    .input input {
+        width: 4rem;
+        height: 4.2rem;
+        margin: 0.4rem;
+    }
+
+    #reset,
+    #equal {
+        width: 9rem;
+    }
+}
