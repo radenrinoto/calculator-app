@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-header">
+            <div class="header">
+                <p>calc</p>
+                <div class="switch">
+                    <div class="switch-radios">
+                        <input type="radio" name="theme-type" value="one" id="first">
+                        <input type="radio" name="theme-type" value="two" id="second">
+                        <input type="radio" name="theme-type" value="three" id="third">
+                    </div>
+                    <div class="switch-fas">
+                        <i class="fas fa-moon">1</i>
+                        <i class="fas fa-sun">2</i>
+                        <i class="fas fa-meteor">3</i>
+                    </div>
+                    <div class="ball"></div>
+                </div>
+            </div>
+
+            <div id="display">
+                <input type="text" id="result" readonly />
+            </div>
+
+            <div id="calculator">
+                <div id="buttons">
+                    <button onclick="appendToDisplay('7')"><strong>7</strong></button>
+                    <button onclick="appendToDisplay('8')"><strong>8</strong></button>
+                    <button onclick="appendToDisplay('9')"><strong>9</strong></button>
+                    <button id="del"><strong>DEL</strong></button>
+                    <button onclick="appendToDisplay('4')"><strong>4</strong></button>
+                    <button onclick="appendToDisplay('5')"><strong>5</strong></button>
+                    <button onclick="appendToDisplay('6')"><strong>6</strong></button>
+                    <button onclick="appendToDisplay('+')"><strong>+</strong></button>
+                    <button onclick="appendToDisplay('1')"><strong>1</strong></button>
+                    <button onclick="appendToDisplay('2')"><strong>2</strong></button>
+                    <button onclick="appendToDisplay('3')"><strong>3</strong></button>
+                    <button onclick="appendToDisplay('-')"><strong>-</strong></button>
+                    <button onclick="appendToDisplay('.')"><strong>.</strong></button>
+                    <button onclick="appendToDisplay('0')"><strong>0</strong></button>
+                    <button onclick="appendToDisplay('/')"><strong>/</strong></button>
+                    <button onclick="appendToDisplay('*')"><strong>*</strong></button>
+                </div>
+                <div class="row">
+                    <button onclick="clearDisplay()"><strong>RESET</strong></button>
+                    <button onclick="calculateResult()"><strong>=</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
