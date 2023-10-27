@@ -32,7 +32,11 @@ const clearScreen = () => {
 }
 
 const deleted = () => {
-    outputScreen.value = outputScreen.value.slice(0, -1)
+    const valueDeleted = outputScreen.value
+    if (valueDeleted) {
+        outputScreen.value = valueDeleted.slice(0, -1)
+        operatorLastInput = '+-*/'.includes(outputScreen.value.slice(-1))
+    }
 }
 
 // Switch button function
